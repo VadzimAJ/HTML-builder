@@ -10,12 +10,13 @@ const rl = readline.createInterface({
 const filePath = path.join(__dirname, 'output.txt');
 const writeStream = fs.createWriteStream(filePath, { flags: 'a' });
 
-console.log('Введите текст. Для выхода введите "exit".');
+console.log('Введите текст. Для выхода введите "exit"');
+console.log('или используйте сочетание клавишь Ctr + C');
 
 rl.on('line', (input) => {
   if (input.toLowerCase() === 'exit') {
     console.log('Программа завершена.');
-    process.exit();
+    process.exit();s
   }
   writeStream.write(`${input}\n`);
 });
