@@ -16,7 +16,7 @@ console.log('или используйте сочетание клавишь Ctr
 rl.on('line', (input) => {
   if (input.toLowerCase() === 'exit') {
     console.log('Программа завершена.');
-    process.exit();s
+    process.exit();
   }
   writeStream.write(`${input}\n`);
 });
